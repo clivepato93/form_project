@@ -1,0 +1,254 @@
+/* css reset reference https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* 1. Use a more-intuitive box-sizing model */
+@font-face {
+  font-family: "Norse-Bold";
+  src: url(./Norse-Bold.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.left {
+  border: 1px solid;
+  font-family: "Norse-Bold", "Times New Roman", Times, serif;
+  background-image: url(./leaves.avif);
+  background-repeat: no-repeat;
+  width: 30%;
+  background-size: cover;
+  background-position: top;
+  background-clip: border-box;
+  height: 100%;
+  color: white;
+  z-index: 10;
+}
+
+.title {
+  margin-top: 200px;
+  position: relative;
+}
+
+.title-background {
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  z-index: 20;
+  opacity: 0.5;
+}
+.test {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+  padding: 1em;
+}
+
+img {
+  width: 120px;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  height: 100vh;
+}
+.padding {
+  padding: 2em;
+}
+
+.general-padding{
+  padding:.5em 2em 0 2em;
+}
+
+.general-styling {
+  /* padding: 2em; */
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.background {
+  background-color: rgb(246, 243, 237);
+}
+
+.text {
+  height: 400px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+form .group {
+  display: flex;
+
+}
+label {
+  font-size: 0.7em;
+  color: rgb(75, 74, 74);
+  letter-spacing: 0.1em;
+}
+
+.group {
+  /* margin-top: .5em; */
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #d9dadd;
+}
+
+form{
+}
+
+form .group div:first-child {
+  margin-right: 200px;
+}
+main > .group{
+  border-top: 2px solid rgb(202, 201, 197);
+  flex-grow: 1;
+}
+
+label {
+  display: block;
+}
+
+
+
+input,
+button {
+  display: block;
+}
+
+input{
+  border: 2px solid #E5E7EB ;
+  outline: none;
+  transition: .5s;
+}
+
+input:focus{
+
+  border:2px solid rgb(30, 98, 199);
+}
+
+input:last-of-type{
+  margin-bottom: 1em;
+}
+
+.relative{
+  position: relative;
+}
+
+
+input:invalid{
+  border: 2px solid red;
+}
+
+.testing{
+  font-size: .7em;
+  display: none;
+  color: red;
+
+}
+
+input:invalid + .testing{
+ position: absolute;
+ top: 45px;
+ display: block;
+  /* content: "Passwords do not match"; */
+}
+
+button{
+  color: white;
+  font-size: .7em;
+  padding: 1em;
+  width: 15em;
+  background-color: #596D48;
+  /* outline: none; */
+  border: none;
+  border-radius: .2em;
+  margin-bottom: 2em;
+}
